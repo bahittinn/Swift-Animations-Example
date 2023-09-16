@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButtoClicked(_ sender: UIButton) {
-        alphaAnimation()
+        //alphaAnimation()
+        scaleAnimation()
     }
     
     func alphaAnimation() {
@@ -29,5 +30,12 @@ class ViewController: UIViewController {
             self.imageView.alpha = 1
         }
     }
+    
+    func scaleAnimation() {
+        UIView.animate(withDuration: 3, delay: 0) {
+            self.imageView.transform = CGAffineTransform(scaleX: 2, y: 2)
+        }
+    }
+    
 }
 
